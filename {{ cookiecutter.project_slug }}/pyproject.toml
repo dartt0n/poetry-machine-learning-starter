@@ -1,0 +1,78 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = "{{ cookiecutter.project_description }}"
+authors = ["{{ cookiecutter.author }}"]
+readme = "readme.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ipykernel = "^6.29.5"
+matplotlib = "^3.9.2"
+seaborn = "^0.13.2"
+scipy = "^1.14.1"
+scikit-learn = "^1.5.2"
+ruff = "^0.7.1"
+polars = "^1.12.0"
+pandas = "^2.2.3"
+torch = "^2.5.0"
+lightning = "^2.4.0"
+wandb = "^0.18.5"
+tensorboard = "^2.18.0"
+clearml = "^1.16.5"
+opencv-python = "^4.10.0.84"
+opencv-contrib-python = "^4.10.0.84"
+onnx = "^1.17.0"
+cattrs = "^24.1.2"
+jupyter = "^1.1.1"
+plotly = "^5.24.1"
+streamlit = "^1.39.0"
+gradio = "^5.4.0"
+ipython = "^8.29.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+exclude = [".mypy_cache", ".ruff_cache", ".venv", "venv", "build", "dist"]
+include = ["pyproject.toml", "**/*.py", "**/*.ipynb"]
+line-length = 128
+indent-width = 4
+target-version = "py311"
+fix = true
+
+[tool.ruff.format]
+preview = true
+
+[tool.ruff.lint]
+select = ["E", "F", "Q", "B", "I", "UP", "C"]
+ignore = []
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402", "F401"]
+"**/{tests,docs,tools}/*" = ["E402"]
+
+[tool.ruff.lint.flake8-bandit]
+check-typed-exception = true
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 130
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+force-single-line = false
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = []
+
+[tool.ruff.lint.flake8-type-checking]
+runtime-evaluated-base-classes = []

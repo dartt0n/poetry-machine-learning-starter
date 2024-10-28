@@ -1,0 +1,6 @@
+{
+  "project_name": "Poetry Machine Learning Starter",
+  "project_sluh": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "project_description": "A starter template for machine learning projects using Poetry",
+  "author": "username <email>"
+}
