@@ -27,7 +27,11 @@ make install # or run `poetry install`
 ```
 
 6. 🎉 Ready to go! 🎉
-
+You can run Jupyter Notebook
+```bash
+poetry run jupyter notebook
+```
+or use your favorite code editor with Jupyter Notebook support (e.g. VSCode or PyCharm)
 
 ## What's Included
 
@@ -88,6 +92,15 @@ poetry run ruff check .
 poetry add <package> # instead of `pip install <package>`
 ```
 
+## How to remove virtual environment
+```bash
+poetry env list # shows enviroments
+poetry env remove <env name>
+```
+
+## How to manage virtual environment
+Virtual environment is fully managed by `poetry`. Please refer to [official documentation](https://python-poetry.org).
+
 ### Why not just use `pip install`?
 
 - Poetry creates a virtual environment for each project, so you don't have to worry about conflicts between packages.
@@ -95,4 +108,4 @@ poetry add <package> # instead of `pip install <package>`
 - Poetry creates a virtual environment for each project, so you can be sure that the exact versions of the packages you use are the ones that are used in the project.
 - Poetry automatically install compatible versions of packages, so you don't have to manually match the versions of the packages you use.
 
-Read more why `poetry` is much better than `pip` in the internet. `poetry` is a standard for modern Python projects, and it's a great way to manage dependencies.
+Read more why `poetry` is much better than `pip` on the Internet. `poetry` is a standard for modern Python projects, and it's a great way to manage dependencies.
